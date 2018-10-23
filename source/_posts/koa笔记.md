@@ -13,7 +13,7 @@ Koa提供一个Context对象，表示一次对话的上下文（包括HTTP请求
 eg:
 
 ```js
-const Koa = require('koa);
+const Koa = require('koa');
 const app = new Koa();
 
 const main = ctx => {

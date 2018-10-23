@@ -1,7 +1,7 @@
 ---
 title: node异步编程方案
 date: 2018-09-24 23:51:30
-categories: 博客
+categories: node
 tags:
   - node
 ---

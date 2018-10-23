@@ -1,6 +1,7 @@
 ---
 title: js代码片段难点集合
 date: 2018-09-25 00:02:05
+categories: js
 tags:
  - js
 ---

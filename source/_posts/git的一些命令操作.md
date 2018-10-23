@@ -157,7 +157,7 @@ git checkout 分支名
 
 ### 学习git资源
 
-- [Atom 爱上 JS](http://haoqicat.com/atom-love-js)
-- [驾驭命令行怪兽](http://haoqicat.com/ride-cli-monster)
-- [Git北京](http://haoqicat.com/gitbeijing)
+- [Atom 爱上 JS](https://haoqicat.com/atom-love-js)
+- [驾驭命令行怪兽](https://haoqicat.com/ride-cli-monster)
+- [Git北京](https://haoqicat.com/gitbeijing)
 
