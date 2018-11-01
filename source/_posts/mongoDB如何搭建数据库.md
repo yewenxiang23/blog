@@ -28,6 +28,11 @@ tags:
 brew install mongodb
 ```
 
+查看安装目录
+```bash
+which mongod 
+```
+
 ### MongoDB启动与使用
 
 #### 启动

@@ -1,6 +1,7 @@
 ---
 title: ajax跨域解决思路
 date: 2018-09-25 00:01:29
+categories: js
 tags:
   - ajax
   - 跨域
