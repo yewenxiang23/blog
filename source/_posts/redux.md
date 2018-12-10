@@ -35,20 +35,20 @@ React与数据流的关系
 
 不只是前端，很多系统开发的时候遵从的都是MVC分离，也就是数据放在Model里面，View来控制显示，Controler做整体的管理。但是随着系统的庞大，它会产生一系列问题。比如举个例子，我们上网shopping，提交订单，那么用户的账号，优惠信息，物流信息，库存等等的Model都会发生更新变化，然后View上的显示也会随之变化，反过来，View的有些变化也会对Model产生影响，这样就使用户下了一个订单以后界面会变得什么样变得不可预测。
 
-![](http://ozrm3516s.bkt.clouddn.com/b8fcd75bd5fbbca99aee523f7784463b.png)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y3p6z9aj30ii0egn1j.jpg)
 
 
 所以在React出现的同时Facebook也搞出了一个Flux `单向数据流` (React是纯V层框架，需要数据流进行支撑)，它的思想如下:它认为用户有各种各样的Action,然后所有的Action由一个统一的Dispacher分发到若干个Store里去，这个Store保存着数据也保存着页面的状态，根据数据和页面的状态，一个store只能向视图层传递信息，而不允许视图层再返回来作用到Store上，然后视图就发生更新，然后再由用户传入新的操作。这样子我们就能预测到Action作用到Store上时，View发生什么变化。
 
-![](http://ozrm3516s.bkt.clouddn.com/62a1013ae2a3bb9da217c05a60155035.png)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xuzt7gmj30t20jw49j.jpg)
 
 
 Redux是Flux的一种实现方法，但是也有些许不一样，它的思想如下
 
-![](http://ozrm3516s.bkt.clouddn.com/2bc8bf1315d61412884e2a7ec04c546e.png)
+![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1xnw7yczj30v00mqwjd.jpg)
 
 
-![](http://ozrm3516s.bkt.clouddn.com/3143ba299483bac48693d9bb2b0d6404.png)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0vh8xej30qm0p6al6.jpg)
 
 
 当页面渲染完，UI就出现了，然后用户触发UI上的Action，然后Action被送到Reducer这个方法里去，然后Reducer更新了Store，Store里包含react开发的State，最后State决定UI层的展现。这就是Redux的一个完整过程。
@@ -65,7 +65,7 @@ Redux是Flux的一种实现方法，但是也有些许不一样，它的思想�
 - server.js
 - webpack
 
-![](http://ozrm3516s.bkt.clouddn.com/0e4da2d309b967d93a4e2029ebc15bca.png)
+![image](https://ws1.sinaimg.cn/large/0073tXM5gy1fy1xm14jlqj31760lagsc.jpg)
 
 
 安装

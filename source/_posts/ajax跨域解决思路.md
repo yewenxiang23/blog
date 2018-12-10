@@ -17,7 +17,7 @@ tags:
 
 #### 发送的是 XHR(XMLHttpRequest) 请求
 如果发送的不是XHR请求，就算是跨域，浏览器也不会报错。
-![](http://ozrm3516s.bkt.clouddn.com/d953ca4cea4e5f51ecc32ad36c0f1db6.jpg)
+![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y79efxoj30of0533zd.jpg)
 
 ### 解决问题的思路
 
@@ -39,7 +39,7 @@ $.ajax({
 	}
 })
 ```
-![](http://ozrm3516s.bkt.clouddn.com/d6ab59d1f5d88bb1f8d72cba6adff180.jpg)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y72cqo9j30o605w75f.jpg)
 > 有三个不同点:
 > 1. 请求的Type不同
 > 2. 请求返回的 Content-Type 不同
@@ -50,7 +50,7 @@ $.ajax({
 后台代码需要做的调整就是：请求参数中发现callback 这个字段，需要返回JS代码，callback 后面的值作为函数名，而请求需要返回的参数，作为函数的参数。
 
 动态创建的script请求完毕后会被销毁，所以dom结构中无法查看，需要再JQ源码中9816行出打断点查看。
-![](http://ozrm3516s.bkt.clouddn.com/84cab8c7a9d4a6ddf11d91651dc8531f.jpg)
+![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvns480j30jz08swfo.jpg)
 > jsonp请求里面除了callback参数之外还多了一个`_`参数，参数值是一个随机的数字，防止请求被缓存。
 
 JSON弊端：
@@ -102,13 +102,13 @@ $.aiax({
 
 首先前端定义：
 
-![](http://ozrm3516s.bkt.clouddn.com/110b9eb47d145042bd41fe9cd5c0461c.jpg)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xwidx7wj30dh083dgg.jpg)
 
 可以发现请求头部增加了如下内容：
-![](http://ozrm3516s.bkt.clouddn.com/c5ff5786443e2cc9f4a032414eda975f.jpg)
+![image](https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y5sjavrj30f805njs6.jpg)
 
 此时去请求发现报错
-![](http://ozrm3516s.bkt.clouddn.com/1839df8c3a07b8c2dbae88d03e65484f.jpg)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y0hz45pj30od02974p.jpg)
 报错信息的意思是：在返回头`Access-Control-Allow-Headers` 字段中没有 `x-header2` 的信息，把 `x-header1 x-header2` 加进去就行了，最好是动态的获取请求头`Origin`里面的值去添加，这样就支持所有的自定义头部了。
 
 ### 虚拟主机上设置响应头信息

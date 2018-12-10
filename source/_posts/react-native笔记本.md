@@ -16,7 +16,7 @@ tags:
 
 #####  ios android 设置App 名称
 -  ios : 在 `Info.plist`中修改
-- ![](http://ozrm3516s.bkt.clouddn.com/bfd7b629ad444a99cc1a63b05d973ec4.jpg)
+- ![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y5022qmj30f502wgm2.jpg)
 -  Android : `android\app\src\main\res\values\strings.xml` 文件中修改 `<string name="app_name">MyProject</string>`
 
 ##### ios android 设置icon图标
@@ -31,7 +31,7 @@ tags:
 - 之后 [参考](http://www.jianshu.com/p/735ba76594b5)
 
 注意：
-![](http://ozrm3516s.bkt.clouddn.com/9c2a5db771472405b3eab24d75cae03e.jpg)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xtussjij30es03swes.jpg)
 - android: 使用 `react-native-splash-screen` 来实现。
 - 可以使用 [这里](http://ticons.fokkezb.nl/) 来生成android 的图片，注意生成后,每个文件夹里面的每张图名称需要更改为 `launch_screen` 然后配置 `react-native-splash-screen` ，就可以使用的了。
 - 碰到的坑：按照文档配好后，出现ios 正常 ，android启动闪退, `“Unfortunately, app has stopped”`, [解决办法](https://github.com/crazycodeboy/react-native-splash-screen/issues/124)
@@ -68,7 +68,7 @@ render(){
 
 ##### 解决 android 绝对定位元素定位在底部被键盘顶起问题
 
-![](http://ozrm3516s.bkt.clouddn.com/c002c141de346bb163465506f0506134.jpg)
+![image](https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y5k91cdj30h305ht9m.jpg)
 
 如果希望被顶起：`android:windowSoftInputMode="adjustResize"`
 

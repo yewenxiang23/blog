@@ -17,13 +17,13 @@ tags:
 - 首先建立一个 `font` 文件夹,里面放入 `iconfont.ttf`
 - 打开 `toydb.xcodeproj` 文件
 
-![](http://ozrm3516s.bkt.clouddn.com/018ecef33d2bf07f044746af296ccd47.jpg)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1xu4xoc8j307f076jro.jpg)
 
 
-![](http://ozrm3516s.bkt.clouddn.com/1a6a25b6f774e6c1420a72b0cbef9cec.png)
+![image](https://wx2.sinaimg.cn/large/0073tXM5gy1fy1xn9m29aj308o04k0tq.jpg)
 
 
-![](http://ozrm3516s.bkt.clouddn.com/7f94c9a102afe46e550a2fa084e9bbe5.jpg)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xsorl2pj30ei02idg6.jpg)
 
 
 ### android 配置

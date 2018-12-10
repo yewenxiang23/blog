@@ -14,7 +14,7 @@ tags:
  
 webpack 打包的本质是把 **src**下的入口文件 entry.js 文件，及其相关联的文件,打包成bundle.js文件，并且放在 **dist** 文件夹下面
 
-![](http://ozrm3516s.bkt.clouddn.com/3caf301e99825095a13d1236fe81c9ef.jpg)
+![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xpb0u3ij30kv0bhwfm.jpg)
 
 webpack 的打包命令：
 
@@ -166,7 +166,7 @@ plugins: [
 接上一步开启服务器 `npm run server` ，命令行报错 ERROR in entry.js from UglifyJs
 Unexpected token: name (urlParts) [entry.js:325,4]
 
-![](http://ozrm3516s.bkt.clouddn.com/6a40bdf7afecaf0890edc5c8b2864772.jpg)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1xrrw61dj30eh03l3z5.jpg)
 
 原因在于：没有区分 **开发环境** 和 **生产环境** 。
 开发环境中代码是不需要压缩的。如果压缩了，调试没有办法找到对应的行号。代码压缩只需要再 **生产环境** 中进行，在开发环境中压缩代码，跑服务器造成了冲突，具体情况不清楚。
@@ -285,7 +285,7 @@ css loader 也需要做一些更改
 
 打包代码，跑本地服务器，这时候发现图片没有了，查看打包后的项目结构，发现css文件中的路径有问题。
 
-![](http://ozrm3516s.bkt.clouddn.com/e010ff487fdb149a1f383ee19751d060.jpg)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y7yhbinj30ip03gq3a.jpg)
 
 这时候需要设置 `publiPath` 公用路径，解决静态文件的路径问题。
 
@@ -301,7 +301,7 @@ output: {
 ```
 重新打包，css文件中图片的路径变为了正确的绝对路径。
 
-![](http://ozrm3516s.bkt.clouddn.com/88e85a323ec8e312da34e551db8c2ec9.jpg)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xw9l7l2j30ki03zq3c.jpg)
 
 ### **打包和分离LESS**
 

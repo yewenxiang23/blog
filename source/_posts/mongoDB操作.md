@@ -81,7 +81,7 @@ db.User.update({},{$unset:{'address':''}},false, true)
 
 修改嵌套文档
 
-![](http://ozrm3516s.bkt.clouddn.com/08f45831e2748309022acff66c093d84.jpg)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xtlf4syj30io05cq39.jpg)
 
 
 ##### "$unset"修饰器

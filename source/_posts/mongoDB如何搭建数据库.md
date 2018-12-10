@@ -16,10 +16,10 @@ tags:
 - Collection: 集合。类似于关系型数据库下的表的概念，例如全班同学信息。
 - Document：文档。一个集合中会包含多个文档（一个文档中存储一个同学的信息）。文档对应关系型数据库中的 记录 这个概念。
 
-![](http://ozrm3516s.bkt.clouddn.com/04ae6c3dd528b8f6c24da0db04d68d6d.jpg)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xq46c96j30aq064glv.jpg)
 
 
-![](http://ozrm3516s.bkt.clouddn.com/3f5c4badca2d136d2d66f0bacf02a560.png)
+![image](https://ws1.sinaimg.cn/large/0073tXM5gy1fy1xpnvjt8j30gg07jmxx.jpg)
 
 
 ### 安装

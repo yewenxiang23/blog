@@ -7,7 +7,7 @@ tags:
 
 ### 命令行中的pug
 
-![](http://ozrm3516s.bkt.clouddn.com/40657433d833f8f38da2d43957d6f192.png)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y2q710qj30ni0cftfy.jpg)
 
 
 ### 安装pug
@@ -27,7 +27,7 @@ $ pug -P -w index.pug
 - `-P` 编译后的html便于查看，保留空白节点
 - `-w` 持续监控文件修改，修改马上编译
 
-![](http://ozrm3516s.bkt.clouddn.com/e0d6e9f3d393fb1a1ff5bf37c31ebf84.png)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1y7qp6kyj30kf07lt9v.jpg)
 
 
 ### 类、ID、属性
@@ -77,16 +77,16 @@ p.
 #### 多行文本中标签的写法分成两种
 
 第一种是带点的纯文本的方式
-![](http://ozrm3516s.bkt.clouddn.com/6e080cbc7542b6e4a4ba5a2e98d64ad0.png)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xs3bvz5j30iq047mxl.jpg)
 
 
 第二种采用缩进的节点方式来写，把文本看做一个文本节点
-![](http://ozrm3516s.bkt.clouddn.com/35902ad8730e1e64d88f899a066b97a2.png)
+![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y1l7j0sj30q0049aaq.jpg)
 
 
 ### 注释
 
-![](http://ozrm3516s.bkt.clouddn.com/5e4e376714cfbecbc6ed169882b23ae1.png)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1xr1ktmmj30qg04jq4f.jpg)
 
 
 对于IE的条件注释
@@ -94,7 +94,7 @@ p.
 
 ### 行内的style和script写法
 
-![](http://ozrm3516s.bkt.clouddn.com/c6a3d1d5018256c566288f0b02f3de5f.png)
+![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1y61yqgbj30rf08n40d.jpg)
 
 
 ### 声明变量和替换数据
@@ -102,7 +102,7 @@ p.
 #### 在html中声明变量
 
 括号里面可以对变量做一些js的处理
-![](http://ozrm3516s.bkt.clouddn.com/ad235cac2da68f26f454927d80499f32.png)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y3gyuznj30rs06sq4i.jpg)
 
 
 
@@ -125,10 +125,10 @@ $ pug -P -w index.pug --O data.json
 ### 安全转义与非转义
 
 `安全转义` 也就是有时候我们希望页面中显示标签，也就是html中是转义后的字符。
-![](http://ozrm3516s.bkt.clouddn.com/2c9b11b6a37aac351cb6bf3abc535330.png)
+![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xob48z8j30st05pgn5.jpg)
 
 `非安全转义` 有时候我们就是希望html中显示的就是标签
-![](http://ozrm3516s.bkt.clouddn.com/ef4072ed06a96d4ea22c66b7935e7629.png)
+![image](https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y8qdtjaj30ur03qdgt.jpg)
 
 
 #### 其他的方式
@@ -156,19 +156,19 @@ p !#{htmlData}
 
 #### for和each的使用方式
 
-![](http://ozrm3516s.bkt.clouddn.com/4c4f7f745d0eaa59079f9dd379391db1.png)
+![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1xqrmd6lj30qb0ftn1j.jpg)
 
 
 #### white使用方式
 
-![](http://ozrm3516s.bkt.clouddn.com/a5e7fcbf8173d407aaa4e9e1525323ba.png)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1y2yt5wsj30g805a0td.jpg)
 
 
 ### 流程代码 if-else-unless-swic
 
 #### if-else 的使用方式
 
-![](http://ozrm3516s.bkt.clouddn.com/32bf87aadb4dbb6eb0dfe23a19ae79c6.png)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1xufv2gzj30o608djsu.jpg)
 
 
 #### unless（除非）
@@ -182,28 +182,28 @@ unless !what
 #### case-when
 
 switch 语句是if-else-if 的兄弟语句,我们在 pug中可以使用 cass-when 来实现的
-![](http://ozrm3516s.bkt.clouddn.com/242a9d04e9cac9b7583fdb749c93479f.png)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xxvdq0oj30iq08xmys.jpg)
 
 
 ### mixin
 
 使用 `mixin` 可以让pug的代码块重用,编译时会转换 javascript 中的函数，可以看做是一个函数，既然是函数，就可以传递参数
-![](http://ozrm3516s.bkt.clouddn.com/505a379f4e45b7754d547a2bafd3f336.png)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y09jd83j30ky0bf76k.jpg)
 
 
 #### mixin的嵌套
 
-![](http://ozrm3516s.bkt.clouddn.com/496edf3cec5bded29c9fd22186e13658.png)
+![image](https://wx1.sinaimg.cn/large/0073tXM5gy1fy1y00ktpaj30rn083wgr.jpg)
 
 
 #### 内联mixin代码块
 
-![](http://ozrm3516s.bkt.clouddn.com/7d51cbd8aed86af7043f6e8c3c8fad34.png)
+![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xsd3owhj30ge07tt9t.jpg)
 
 解释：调用 `team`函数的时候，下面包含一个 `p Good job!` 就代表代码块`block`，注意缩进关系。函数中说明的是，如果有代码块就执行代码块，否则执行`p no team`。
 
 除了代码块和文本，mixin还支持传递属性，比如传递classname
-![](http://ozrm3516s.bkt.clouddn.com/9433700fd6d5d3569c20cbbebc9b663d.png)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y2gu38bj30ri0cpq6t.jpg)
 
 
 ### pug模板的继承

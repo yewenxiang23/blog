@@ -10,7 +10,7 @@ tags:
 一个 React 组件的各个生命阶段会自动触发一些函数，这些被称为生命周期函数。
 具体如下图：
 
-![](http://ozrm3516s.bkt.clouddn.com/199ffe756e649a5258bced400d026e95.jpg)
+![image](https://wx3.sinaimg.cn/large/0073tXM5gy1fy1xx8d4jjj30o40h7gn6.jpg)
 
 
 ##### 初始化:

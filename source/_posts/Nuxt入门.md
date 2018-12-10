@@ -21,7 +21,7 @@ css:['~assets/css/main.css']
 
 路由和vue中类似，不过Nuxt是根据page目录来动态生成路由表的，不需要我们配置。
 
-![](http://ozrm3516s.bkt.clouddn.com/0a77ae84ac40924089a4329305f5e04d.jpg)
+![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg)
 
 ```html
 <ul>
@@ -207,3 +207,13 @@ export default {
 ```
 
 由于请求数据时组件不存在，这里也就没有this，return 的对象会直接合并到 data中, 在模板中直接绑定数据即可。
+
+### Nuxt升级
+
+使用命令
+
+```bash
+npm upgrade
+```
+
+不能直接只升级nuxt，以上命令出问题，最好删除 lock-package.json 文件

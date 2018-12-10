@@ -13,6 +13,6 @@ tags:
 - `npm i babel-plugin-transform-decorators-legacy` 插件
 - package.json里babel加上plugins配置
 
-![](http://ozrm3516s.bkt.clouddn.com/ccd27ed1b2b9d509dcf82c08b61afea9.jpg)
+![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1y6ublmhj30j409w0th.jpg)
 
-![](http://ozrm3516s.bkt.clouddn.com/c257682dedb9281a11062495a2d2dc62.jpg)
+![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y6j83igj30kc0amwfv.jpg)
