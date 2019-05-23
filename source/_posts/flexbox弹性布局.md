@@ -36,7 +36,7 @@ tags:
 
 ### 基本概念
 采用 Flex 布局的元素(display:flex)，称为 Flex 容器（flex container），它的所有子元素自动成为容器成员，称为子项目。
-![image](https://wx2.sinaimg.cn/large/0073tXM5gy1fy1xxnssw4j30fe08zjs0.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xxnssw4j30fe08zjs0.jpg)
 
 
 容器默认存在两根主轴: `水平的主轴(main axis)` 和 `垂直的交叉轴(cross axis)`。
@@ -64,7 +64,7 @@ tags:
 > - column : 主轴为垂直方向，起点在顶部(top)。
 > - column-reverse : 主轴为垂直方向，起点在底部(bottom)。
 
-![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xvdvtpnj30lk05d0so.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xvdvtpnj30lk05d0so.jpg)
 
 
 #### flex-wrap 属性
@@ -74,7 +74,7 @@ tags:
 > - wrap : 换行，第一行在上方
 > - wrap-reverse : 换行，第一行在下方。如下图
 
-![image](https://wx2.sinaimg.cn/large/0073tXM5gy1fy1y1tskbdj30jh04xacg.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y1tskbdj30jh04xacg.jpg)
 
 
 #### flex-flow 属性
@@ -89,7 +89,7 @@ tags:
 > - space-beteen : 两段对齐，子项目之间的间隔都相等
 > - space-around : 每个子项目两侧的间隔相等。所以，子项目之间的间隔比项目与容器边框的间隔大一倍
 
-![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xy9nqanj30bs0dmq3e.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xy9nqanj30bs0dmq3e.jpg)
 
 
 #### align-items 属性
@@ -101,7 +101,7 @@ tags:
 > - baseline : 项目的第一行文字的基线对齐
 > - stretch(默认值) : 如果子项目未设置高或者设置为auto,将占满整个容器的高度
 
-![image](https://ws1.sinaimg.cn/large/0073tXM5gy1fy1y44cx9nj30bg0e23z4.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y44cx9nj30bg0e23z4.jpg)
 
 
 #### align-content 属性
@@ -113,7 +113,7 @@ tags:
 > - space-beteen : 与交叉轴两端对齐，轴线之间的间隔平均分布
 > - space-around : 每根轴线两侧的间隔都相等，所以，轴线之间的间隔比轴线与容器边框的间隔大一倍
 
-![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1y7ioetpj30bh0e1t9g.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y7ioetpj30bh0e1t9g.jpg)
 
 
 ---
@@ -130,7 +130,7 @@ tags:
 #### order 属性
 `order` 属性定义子项目的排列顺序。数值越小，排列越靠前，默认为0。
 
-![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1xrhj6haj30dn08pdfz.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xrhj6haj30dn08pdfz.jpg)
 
 
 #### flex-grow 属性
@@ -138,7 +138,7 @@ tags:
 
 如果所有的子项目 `flex-grow` 属性都为1，存在剩余空间则它们将等分剩余空间，如果一个子项目的 `flex-grow` 属性为2，其他子项目都为1，则前者占据的剩余空间将比其他子项目多一倍，如下图。
 
-![image](https://ws3.sinaimg.cn/large/0073tXM5gy1fy1xvx7prej30ej03l0so.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xvx7prej30ej03l0so.jpg)
 
 
 #### flex-shrink 属性
@@ -146,7 +146,7 @@ tags:
 
 如果所有子项目的  `flex-shrink` 属性都为1，当空间不足时，都将等比例缩小，如果一个子项目的 `flex-shrink` 属性为0，其他子项目都为1，则空间不足时，前者不缩小，如下图。
 
-![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1xt3a5uvj30d302o0tl.jpg) 
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1xt3a5uvj30d302o0tl.jpg) 
 
 
 #### flex-basis 属性
@@ -229,7 +229,7 @@ tags:
 #### align-self 属性
 `align-self` 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto` ，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch` 。
 
-![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y5cpedbj30d706nq35.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y5cpedbj30d706nq35.jpg)
 
 
 ------

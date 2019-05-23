@@ -12,7 +12,7 @@ tags:
 
 ##### 启动
 直接终端输入 `nginx` 启动，可以使用  `ps -ef|grep nginx` 来查看是否启动成功
-![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y37zurlj30kb047t9i.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y37zurlj30kb047t9i.jpg)
 进程号为 3843
 在终端输入 `kill -term  3843` 来停止进程
 

@@ -48,6 +48,188 @@ iconutil -c icns icons.iconset -o Icon.icns
 
 ### 目录结构
 
-![image](https://ws4.sinaimg.cn/large/0073tXM5gy1fy1y9cnh7ij30bo070t8u.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y9cnh7ij30bo070t8u.jpg)
+
+`static` 文件夹和 `index.html` 为vue打包好的文件
+
+`main.js` 为程序主进程文件
+
+```js
+// main.js
+const path = require('path');
+const url = require('url');
+const {
+    app,
+    BrowserWindow,
+    ipcMain,
+    dialog,
+    shell
+} = require('electron');
+const { autoUpdater } = require('electron-updater');
+const feedUrl = `http://39.107.118.115:3000/${process.platform}`;
+//这里39.107.118.115:3000 为服务端ip地址，需要再服务器上搭建一个静态服务器
+let isSetupFlash = false
+let webContents;
+try {
+    app.commandLine.appendSwitch('ppapi-flash-path', app.getPath('pepperFlashSystemPlugin'))
+    isSetupFlash = true
+} catch (error) {
+    isSetupFlash = false
+}
+let createWindow = () => {
+    let win = new BrowserWindow({
+        maximizable: true,
+        width: 1200,
+        height: 800,
+        minWidth: 1200,
+        minHeight: 800,
+        show: false,
+        center: true,
+        webPreferences: {
+            plugins: true
+        },
+        frame: true,
+    });
+
+    webContents = win.webContents;
+
+    win.loadURL(
+        url.format({
+            pathname: path.join(__dirname, 'index.html'),  //指定渲染进程入口文件
+            protocol: 'file:',
+            slashes: true
+        })
+    );
+    win.on('closed', function() {
+        win = null
+    })
+    win.once('ready-to-show', () => {
+        win.show()
+    })
+};
+let updateDescription
+let checkForUpdates = () => { //检测更新
+    autoUpdater.setFeedURL(feedUrl);
+
+    //更新错误
+    autoUpdater.on('error', function(message) {
+        dialog.showErrorBox('更新错误！', '更新出错，请稍后再试')
+    });
+    //检测更新
+    autoUpdater.on('checking-for-update', function(message) {
+
+    });
+    //可以更新
+    autoUpdater.on('update-available', function(message) {
+        updateDescription = message.description //打包后 dist/latest.yml 中增加description字段，可以填写更新的描述信息，更加友好。
+    });
+    //不需更新
+    autoUpdater.on('update-not-available', function(message) {
+
+    });
+
+    // 更新下载进度事件
+    autoUpdater.on('download-progress', function(progressObj) {
+
+        })
+        //下载升级
+    autoUpdater.on('update-downloaded', function(event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) {
+
+        dialog.showMessageBox({
+            type: 'info',
+            title: '提示消息',
+            message: `
+                新版本已下载完成，是否现在退出并安装?
+                更新内容：
+                ${updateDescription}
+            `,
+            buttons: ['yes', 'no']
+        }, function(index) {
+            if (index === 0) {
+                autoUpdater.quitAndInstall();
+            }
+        })
+    });
+
+    //执行自动更新检查
+    autoUpdater.checkForUpdates();
+};
+app.on('ready', () => {
+    createWindow();
+    setTimeout(function() {
+        if (!isSetupFlash) {
+            dialog.showMessageBox({
+                type: 'info',
+                title: '提示消息',
+                message: `
+                    检测到您系统中没有安装Flash，编辑器中的视频可能无法查看，是否去安装？
+                `,
+                buttons: ['yes', 'no']
+            }, function(index) {
+                if (index === 0) {
+                    shell.openExternal('https://get2.adobe.com/cn/flashplayer/')
+                    app.quit()
+                }
+            })
+        }
+        checkForUpdates()
+    }, 1000);
+});
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit()
+    }
+});
+app.on('activate', function() {
+    if (mainWindow === null) {
+        createWindow()
+    }
+})
+```
 
 
+```json
+{
+    "name": "electrontoydb",
+    "version": "1.0.5",
+    "description": "...", //程序的描述，需要填写。
+    "main": "main.js", //指定主进程入口文件
+    "scripts": {
+        "dev": "node_modules/.bin/electron .",
+        "build": "rimraf dist && electron-builder -w"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^3.0.7",
+        "electron-builder": "^20.29.0",
+        "rimraf": "^2.6.2"
+    },
+    "dependencies": {
+        "electron-updater": "^3.1.6"
+    },
+    "build": {
+        "productName": "..",  //打包软件名称
+        "appId": "com.toydb.app",
+        "win": {
+            "icon": "icon/icon.ico" //windows软件图标路径
+        },
+        "mac": {
+            "icon": "icon/icon.icns" // mac图标路径
+        },
+        "publish": [{
+            "provider": "generic",  
+            "url": "http://39.107.118.115:3000" //指定更新的地址
+        }]
+    }
+}
+```
+
+在打包后，上传dist 中的四个文件到服务器 win32文件夹下
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fykhfclqzcj30g4044gm3.jpg)
+
+苹果应用也是一样。
+
+> 需要注意的是：每次打包升级需要修改 package.json 文件中的 version 版本号，例如：1.0.0 --> 1.0.1。

@@ -74,3 +74,15 @@ tags:
     -webkit-box-orient: vertical;
 }
 ```
+
+### 防止ios手机降页面数字变成蓝色号码
+
+```html
+<meta name="format-detection" content="telephone=no" />
+```
+
+### 静止手机用户缩放
+
+```html
+<meta  charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+```

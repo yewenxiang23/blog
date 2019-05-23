@@ -273,7 +273,7 @@ ipcRenderer.on('toA', function(event, params){  //接收消息
 - 主进程中使用的模块
 - 渲染进程中使用的模块
 - 都可以使用的模块
-![image](https://ws2.sinaimg.cn/large/0073tXM5gy1fy1y69jdxfj30je0b2gmv.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1y69jdxfj30je0b2gmv.jpg)
 
 模块可以让我们用js调用或者操作电脑上某一部分原生的功能。
 

@@ -21,7 +21,7 @@ css:['~assets/css/main.css']
 
 路由和vue中类似，不过Nuxt是根据page目录来动态生成路由表的，不需要我们配置。
 
-![image](https://wx4.sinaimg.cn/large/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg)
+![image](http://ywx.store:86/kodexplorer/data/User/admin/home/图片/0073tXM5gy1fy1yaa68s7j309d05lq31.jpg)
 
 ```html
 <ul>
